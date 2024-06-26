@@ -17,6 +17,7 @@ import org.Clothify.entity.EmployeEntity;
 import org.Clothify.util.BoType;
 
 import java.net.URL;
+import java.text.ParseException;
 import java.util.ResourceBundle;
 
 public class AddEmplyeController implements Initializable {
@@ -50,19 +51,19 @@ public class AddEmplyeController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        colCustomerId.setCellValueFactory(new PropertyValueFactory<>("Employee_id "));
-        colCustomerTitle.setCellValueFactory(new PropertyValueFactory<>("cEmployee_title"));
-        colCustomerName.setCellValueFactory(new PropertyValueFactory<>("Employee_name"));
-        colDob.setCellValueFactory(new PropertyValueFactory<>("dob"));
-        colPosition.setCellValueFactory(new PropertyValueFactory<>("Employee_position"));
-        colSalary.setCellValueFactory(new PropertyValueFactory<>("salary"));
-        colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
-        colCity.setCellValueFactory(new PropertyValueFactory<>("city"));
-        colProvince.setCellValueFactory(new PropertyValueFactory<>("province"));
-        colPostalCode.setCellValueFactory(new PropertyValueFactory<>("postal_code"));
+//        colCustomerId.setCellValueFactory(new PropertyValueFactory<>("Employee_id "));
+//        colCustomerTitle.setCellValueFactory(new PropertyValueFactory<>("cEmployee_title"));
+//        colCustomerName.setCellValueFactory(new PropertyValueFactory<>("Employee_name"));
+//        colDob.setCellValueFactory(new PropertyValueFactory<>("dob"));
+//        colPosition.setCellValueFactory(new PropertyValueFactory<>("Employee_position"));
+//        colSalary.setCellValueFactory(new PropertyValueFactory<>("salary"));
+//        colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+//        colCity.setCellValueFactory(new PropertyValueFactory<>("city"));
+//        colProvince.setCellValueFactory(new PropertyValueFactory<>("province"));
+//        colPostalCode.setCellValueFactory(new PropertyValueFactory<>("postal_code"));
         loadInitialValues();
-        loadTable01();
-        loadTable02();
+       // loadTable01();
+        //loadTable02();
         loadPosition();
 
 
@@ -121,36 +122,32 @@ public class AddEmplyeController implements Initializable {
     }
     public void btnAddCustomerOnAction(ActionEvent actionEvent) {
 
-        try {
-           Employee employee= new Employee(
+            Employee employee= new Employee(
                    txtCustomerId1.getText(),
                    employeeTitle.getValue().toString(),
                    txtCustomerName.getText(),
                    addPositionTitle.getValue().toString(),
-                   Double.parseDouble(txtSalary.getText()),
+                   txtSalary.getText(),
                    txtAddress.getText(),
                    txtCity.getText(),
                    txtProvince.getText(),
                    txtPostalCode.getText()
 
            );
-            System.out.println(employee);
-
-            boolean b = employeBo.saveCustomer(employee);
-            System.out.println(b);
-            if (b) {
-                new Alert(Alert.AlertType.ERROR, "Employee Not Added !").show();
-            } else {
-                new Alert(Alert.AlertType.CONFIRMATION, "Employee Added !").show();
-            }
-        } catch (NumberFormatException e) {
-            throw new RuntimeException(e);
+        System.out.println(employee);
+        boolean em = employeBo.saveCustomer(employee);
+        System.out.println(em);
+        if (em){
+            new Alert(Alert.AlertType.ERROR,"Customer Not Added !").show();
+        }else{
+            new Alert(Alert.AlertType.CONFIRMATION,"Customer Added !").show();
         }
+
     }
 
     public void btnSearchOnAction(ActionEvent actionEvent) {
-        EmployeEntity customer = EmployeController.getInstance().searchEmploye(txtCustomerId.getText());
-        System.out.println(customer);
+        Employee employee = EmployeController.getInstance().searchEmploye(txtCustomerId.getText());
+        System.out.println(employee);
     }
 
     public void btnDeleteOnAction(ActionEvent actionEvent) {

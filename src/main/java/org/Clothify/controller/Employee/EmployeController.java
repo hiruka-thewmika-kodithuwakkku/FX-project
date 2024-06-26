@@ -5,12 +5,11 @@ package org.Clothify.controller.Employee;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.Clothify.dto.Employee;
-import org.Clothify.entity.EmployeEntity;
-import org.Clothify.util.HibernateUtil;
-import org.hibernate.Session;
-import org.hibernate.query.Query;
+import org.Clothify.util.CrudUtil;
 
-import java.util.List;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class EmployeController implements EmployeService{
 
@@ -24,29 +23,83 @@ public class EmployeController implements EmployeService{
         }
         return instance;
     }
-    @Override
-    public EmployeEntity searchEmploye(String employeeId) {
-        try (Session session = HibernateUtil.getSession()) {
-            return session.get(EmployeEntity.class, employeeId);
-        } catch (Exception e) {
-            throw new RuntimeException("Error searching employee with ID: " + employeeId, e);
+
+    public Employee searchEmploye(String employeeId) {
+        System.out.println(employeeId);
+        try {
+            ResultSet resultSet  = CrudUtil.execute("SELECT * FROM customer WHERE employeeId=?",employeeId);
+
+            while (resultSet.next()){
+                return new Employee(
+                        resultSet.getString(1),
+                        resultSet.getString(2),
+                        resultSet.getString(3),
+                        resultSet.getString(4),
+                        resultSet.getString(5),
+                        resultSet.getString(6),
+                        resultSet.getString(7),
+                        resultSet.getString(8),
+                        resultSet.getString(9)
+                );
+            }
+
+
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
+        return null;
     }
     @Override
-    public ObservableList getAllEmploye() {
-        try (Session session = HibernateUtil.getSession()) {
-            Query<EmployeEntity> query = session.createQuery("FROM EmployeEntity", EmployeEntity.class);
-            List<EmployeEntity> resultList = query.list();
-            return FXCollections.observableArrayList(resultList);
-        } catch (Exception e) {
-            throw new RuntimeException("Error retrieving all employees", e);
+    public ObservableList<Employee> getAllEmploye() {
+        try {
+            ResultSet resultSet = CrudUtil.execute("SELECT * FROM EmployeEntity");
+            ObservableList<Employee> listTable = FXCollections.observableArrayList();
+            while (resultSet.next()) {
+                listTable.add(
+                        new Employee(
+                                resultSet.getString(1),
+                                resultSet.getString(2),
+                                resultSet.getString(3),
+                                resultSet.getString(4),
+                                resultSet.getString(5),
+                                resultSet.getString(6),
+                                resultSet.getString(7),
+                                resultSet.getString(8),
+                                resultSet.getString(9)
+                        )
+                );
+
+            }
+            return listTable;
+
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
+
     }
 
-    @Override
+
+
+
     public boolean addEmploye(Employee customer) {
+        try {
+            String SQL = "INSERT INTO  EmployeEntity VALUES (?,?,?,?,?,?,?,?,?)";
+            CrudUtil.execute(
+                    SQL,
+                    customer.getEmployeeId(),
+                    customer.getEmployeeTitle(),
+                    customer.getEmployeeName(),
+                    customer.getSalary(),
+                    customer.getAddress(),
+                    customer.getCity(),
+                    customer.getProvince(),
+                    customer.getPostalCode()
+            );
+
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         return false;
     }
-
 
 }

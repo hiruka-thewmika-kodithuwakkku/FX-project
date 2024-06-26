@@ -5,6 +5,7 @@ import com.jfoenix.controls.JFXTextField;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
@@ -14,7 +15,10 @@ import org.Clothify.bo.User.USerBo;
 import org.Clothify.dto.User;
 import org.Clothify.util.BoType;
 
-public class addUserController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class addUserFromController implements Initializable {
 
 
     @FXML
@@ -91,5 +95,10 @@ public class addUserController {
     @FXML
     void btnUpdate(ActionEvent event) {
         // Implement update logic here
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
     }
 }

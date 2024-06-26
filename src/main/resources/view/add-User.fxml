@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="956.0" stylesheets="@../css/dashboardDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Clothify.controller.User.addUserController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="956.0" stylesheets="@../css/dashboardDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Clothify.controller.User.addUserFromController">
    <children>
       <JFXTextField fx:id="txtNaame" layoutX="55.0" layoutY="236.0" prefHeight="26.0" prefWidth="207.0" promptText="Name" />
       <JFXTextField fx:id="textmail" layoutX="55.0" layoutY="297.0" prefHeight="26.0" prefWidth="207.0" promptText="Email" />
