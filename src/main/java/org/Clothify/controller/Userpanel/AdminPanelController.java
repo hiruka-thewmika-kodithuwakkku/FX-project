@@ -4,10 +4,12 @@ package org.Clothify.controller.Userpanel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -23,26 +25,38 @@ public class AdminPanelController {
         try {
             FXMLLoader load = new FXMLLoader();
             load.setLocation(getClass().getResource("/view/add_Employe.fxml"));
+            Parent loadedRoot = load.load();
             anchorPanel.getChildren().clear();
-            anchorPanel.getChildren().add(load.load());
-
+            StackPane stackPane = new StackPane(loadedRoot);
+            stackPane.setAlignment(Pos.CENTER);
+            anchorPanel.getChildren().add(stackPane);
+            AnchorPane.setTopAnchor(stackPane, 0.0);
+            AnchorPane.setBottomAnchor(stackPane, 0.0);
+            AnchorPane.setLeftAnchor(stackPane, 0.0);
+            AnchorPane.setRightAnchor(stackPane, 0.0);
 
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-    }
+        }
 
     public void btnProduckts(ActionEvent actionEvent) {
     }
 
     public void btnBackonAction(ActionEvent actionEvent) {
         try {
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            Parent root = null;
-            root = FXMLLoader.load(getClass().getResource("/view/loginform.fxml"));
-            stage.setScene(new Scene(root));
-            stage.show();
+            FXMLLoader load = new FXMLLoader();
+            load.setLocation(getClass().getResource("/view/loginform.fxml"));
+            Parent loadedRoot = load.load();
+            anchorPanel.getChildren().clear();
+            StackPane stackPane = new StackPane(loadedRoot);
+            stackPane.setAlignment(Pos.CENTER);
+            anchorPanel.getChildren().add(stackPane);
+            AnchorPane.setTopAnchor(stackPane, 0.0);
+            AnchorPane.setBottomAnchor(stackPane, 0.0);
+            AnchorPane.setLeftAnchor(stackPane, 0.0);
+            AnchorPane.setRightAnchor(stackPane, 0.0);
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -53,9 +67,15 @@ public class AdminPanelController {
         try {
             FXMLLoader load = new FXMLLoader();
             load.setLocation(getClass().getResource("/view/addSupplier.fxml"));
+            Parent loadedRoot = load.load();
             anchorPanel.getChildren().clear();
-            anchorPanel.getChildren().add(load.load());
-
+            StackPane stackPane = new StackPane(loadedRoot);
+            stackPane.setAlignment(Pos.CENTER);
+            anchorPanel.getChildren().add(stackPane);
+            AnchorPane.setTopAnchor(stackPane, 0.0);
+            AnchorPane.setBottomAnchor(stackPane, 0.0);
+            AnchorPane.setLeftAnchor(stackPane, 0.0);
+            AnchorPane.setRightAnchor(stackPane, 0.0);
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -66,12 +86,18 @@ public class AdminPanelController {
         try {
             FXMLLoader load = new FXMLLoader();
             load.setLocation(getClass().getResource("/view/add-User.fxml"));
+            Parent loadedRoot = load.load();
             anchorPanel.getChildren().clear();
-            anchorPanel.getChildren().add(load.load());
-
+            StackPane stackPane = new StackPane(loadedRoot);
+            stackPane.setAlignment(Pos.CENTER);
+            anchorPanel.getChildren().add(stackPane);
+            AnchorPane.setTopAnchor(stackPane, 0.0);
+            AnchorPane.setBottomAnchor(stackPane, 0.0);
+            AnchorPane.setLeftAnchor(stackPane, 0.0);
+            AnchorPane.setRightAnchor(stackPane, 0.0);
 
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+     }
     }
-}

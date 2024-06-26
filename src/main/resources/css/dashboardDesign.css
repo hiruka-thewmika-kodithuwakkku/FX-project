@@ -11,6 +11,18 @@
     -fx-border-color:#000;
     -fx-border-width:.2px .4px .8px .4px;
 }
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  background-radius: 2px;
+}
 
 .close{
     -fx-background-color:transparent;
@@ -39,8 +51,8 @@
     -fx-font-size: 14px;
     -fx-text-fill: #000000;
     -fx-alignment: CENTER-LEFT;
-    -fx-background-radius: 10px;
-    -fx-border-radius: 10px;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
     -fx-padding: 10px; /* Add padding for better visual appearance */
     -fx-background-image: url("@..\img\pixels-bclarkphoto-21492.jpg");
     -fx-background-size: cover; /* Ensures the image covers the entire button */

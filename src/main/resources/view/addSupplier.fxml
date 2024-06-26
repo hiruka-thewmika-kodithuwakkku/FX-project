@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Separator?>
@@ -12,36 +13,32 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Clothify.controller.Supplier.AddSupplierManeegeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="927.0" stylesheets="@../css/dashboardDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Clothify.controller.Supplier.AddSupplierManeegeController">
    <children>
-      <JFXTextField fx:id="txtCompany" layoutX="55.0" layoutY="236.0" prefHeight="26.0" prefWidth="207.0" promptText="Company" />
-      <JFXTextField fx:id="mobilenukmber" layoutX="55.0" layoutY="297.0" prefHeight="26.0" prefWidth="207.0" promptText="Mobil Number" />
-      <ChoiceBox fx:id="txtProduct" layoutX="55.0" layoutY="461.0" prefHeight="26.0" prefWidth="207.0" />
-      <JFXTextField fx:id="addres" layoutX="55.0" layoutY="363.0" prefHeight="26.0" prefWidth="207.0" promptText="Addres" />
-      <Separator layoutX="280.0" layoutY="138.0" orientation="VERTICAL" prefHeight="381.0" prefWidth="4.0" />
-      <Button layoutX="461.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnUpdate" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #4cd137;" styleClass="update-btn" stylesheets="@/css/dashboardDesign.css" text="Update" textFill="WHITE">
+      <JFXTextField fx:id="txtCompany" layoutX="55.0" layoutY="204.0" prefHeight="26.0" prefWidth="207.0" promptText="Company" />
+      <JFXTextField fx:id="mobilenukmber" layoutX="55.0" layoutY="263.0" prefHeight="26.0" prefWidth="207.0" promptText="Mobil Number" />
+      <ChoiceBox fx:id="txtProduct" layoutX="55.0" layoutY="460.0" prefHeight="26.0" prefWidth="207.0" />
+      <JFXTextField fx:id="addres" layoutX="55.0" layoutY="327.0" prefHeight="26.0" prefWidth="207.0" promptText="Addres" />
+      <Separator layoutX="281.0" layoutY="138.0" orientation="VERTICAL" prefHeight="350.0" prefWidth="5.0" />
+      <Button layoutX="454.0" layoutY="94.0" mnemonicParsing="false" onAction="#btnUpdate" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #4cd137;" styleClass="update-btn" stylesheets="@/css/dashboardDesign.css" text="Update" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btnAdd" layoutX="252.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnAdd" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #00a8ff;" styleClass="add-btn" stylesheets="@/css/dashboardDesign.css" text="Add New" textFill="WHITE">
+      <Button fx:id="btnAdd" layoutX="257.0" layoutY="93.0" mnemonicParsing="false" onAction="#btnAdd" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: #00a8ff;" styleClass="add-btn" stylesheets="@/css/dashboardDesign.css" text="Add" textFill="WHITE" />
+      <Button layoutX="354.0" layoutY="94.0" mnemonicParsing="false" onAction="#btnDelete" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #e84118;" styleClass="clear-btn" stylesheets="@/css/dashboardDesign.css" text="Delete" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="361.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnDelete" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #e84118;" styleClass="clear-btn" stylesheets="@/css/dashboardDesign.css" text="Delete" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Button>
-      <TextField layoutX="55.0" layoutY="88.0" promptText="search" />
-      <Button layoutX="212.0" layoutY="87.0" mnemonicParsing="false" stylesheets="@/css/dashboardDesign.css">
+      <TextField layoutX="55.0" layoutY="88.0" prefHeight="38.0" prefWidth="181.0" promptText="search" />
+      <Button layoutX="201.0" layoutY="89.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="34.0" styleClass="nav-btn" stylesheets="@../css/dashboardDesign.css">
          <graphic>
             <FontAwesomeIconView glyphName="SEARCH" />
          </graphic>
       </Button>
       <Separator layoutX="53.0" layoutY="131.0" prefHeight="0.0" prefWidth="857.0" />
-      <TableView layoutX="298.0" layoutY="147.0" prefHeight="372.0" prefWidth="618.0">
+      <TableView layoutX="298.0" layoutY="147.0" prefHeight="343.0" prefWidth="614.0" stylesheets="@../css/dashboardDesign.css">
         <columns>
           <TableColumn fx:id="colID" prefWidth="92.80001831054688" text="SuplierID" />
             <TableColumn fx:id="colnic" prefWidth="82.39996337890625" text="Company" />
@@ -51,8 +48,12 @@
             <TableColumn fx:id="colposition1" prefWidth="137.60003662109375" text="Product" />
         </columns>
       </TableView>
-      <JFXTextField fx:id="txtSupplierID" layoutX="55.0" layoutY="177.0" prefHeight="26.0" prefWidth="207.0" promptText="ID" />
+      <JFXTextField fx:id="txtSupplierID" layoutX="55.0" layoutY="152.0" prefHeight="26.0" prefWidth="207.0" promptText="ID" />
       <ImageView fx:id="img" fitHeight="93.0" fitWidth="128.0" layoutX="952.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
-      <JFXTextField fx:id="addres1" layoutX="55.0" layoutY="413.0" prefHeight="26.0" prefWidth="207.0" promptText="Email" />
+      <JFXTextField fx:id="addres1" layoutX="55.0" layoutY="395.0" prefHeight="26.0" prefWidth="207.0" promptText="Email" />
    </children>
+   <styleClass>
+      <String fx:value="shadow" />
+      <String fx:value="white-bg" />
+   </styleClass>
 </AnchorPane>

@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="316858f8-925e-4333-b5a9-3265f1b8f19a" name="Changes" comment="" />
+    <list default="true" id="316858f8-925e-4333-b5a9-3265f1b8f19a" name="Changes" comment="fx project">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/reset_Password.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/Userpanel/AdminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/Userpanel/AdminPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/css/dashboardDesign.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/dashboardDesign.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/add-User.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/add-User.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/addSupplier.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/addSupplier.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/add_Employe.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/add_Employe.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/reset_password.fxml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +22,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -34,15 +45,16 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Hiruka Thewmika/IdeaProjects/FxClothifyStore/src/main/resources",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
+    "last_opened_file_path": "C:/Users/Hiruka Thewmika/IdeaProjects/FxClothifyStore/src/main/resources/view/reset_Password.fxml",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
+    "settings.editor.selected.configurable": "preferences.JavaFX"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Hiruka Thewmika\IdeaProjects\FxClothifyStore\src\main\resources\view" />
       <recent name="C:\Users\Hiruka Thewmika\IdeaProjects\FxClothifyStore\src\main\resources" />
       <recent name="C:\Users\Hiruka Thewmika\IdeaProjects\FxClothifyStore\src\main\java\org\Clothify" />
       <recent name="C:\Users\Hiruka Thewmika\IdeaProjects\FxClothifyStore\src\main\java" />
@@ -99,6 +111,19 @@
       <option name="presentableId" value="Default" />
       <updated>1719384827255</updated>
     </task>
+    <task id="LOCAL-00001" summary="fx project">
+      <option name="closed" value="true" />
+      <created>1719390253777</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719390253777</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fx project" />
+    <option name="LAST_COMMIT_MESSAGE" value="fx project" />
   </component>
 </project>
