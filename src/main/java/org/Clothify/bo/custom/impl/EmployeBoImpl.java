@@ -1,8 +1,4 @@
 package org.Clothify.bo.custom.impl;
-
-
-
-
 import org.Clothify.bo.custom.EmployeBo;
 import org.Clothify.dao.DaoFactory;
 import org.Clothify.dao.employe.EmployeDao;
@@ -20,8 +16,7 @@ public class EmployeBoImpl implements EmployeBo {
     }
 
     @Override
-    public boolean deleteById(String id) {
-        return false;
+    public boolean deleteById(String id) {return false;
     }
 }
 

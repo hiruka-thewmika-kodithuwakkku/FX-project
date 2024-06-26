@@ -9,10 +9,9 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "Supplier")
-public class Supplier {
+public class SupplierEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private String Supplierid;
 
     @Column(name = "name")
     private String name;

@@ -7,8 +7,6 @@ import org.Clothify.bo.User.impl.UserBoImpl;
 import org.Clothify.bo.custom.impl.EmployeBoImpl;
 import org.Clothify.util.BoType;
 
-import static org.Clothify.util.BoType.EMPLOYEE;
-import static org.Clothify.util.BoType.USER;
 
 public class BoFactory {
     private static BoFactory instance;

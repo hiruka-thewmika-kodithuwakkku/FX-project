@@ -24,7 +24,7 @@ public class AddEmplyeController implements Initializable {
     public ChoiceBox cmbCustomerTitle;
     public JFXTextField txtCustomerName;
     public DatePicker dateDob;
-    public JFXTextField txtSalary,txtAddress;
+    public JFXTextField txtSalary, txtAddress;
 
     public JFXTextField txtCity;
     public JFXTextField txtProvince;
@@ -61,12 +61,13 @@ public class AddEmplyeController implements Initializable {
         colProvince.setCellValueFactory(new PropertyValueFactory<>("province"));
         colPostalCode.setCellValueFactory(new PropertyValueFactory<>("postal_code"));
         loadInitialValues();
-       // loadTable01();
-       // loadTable02();
+        loadTable01();
+        loadTable02();
         loadPosition();
 
 
     }
+
 
     private void loadPosition() {
         ObservableList Position= FXCollections.observableArrayList();
@@ -89,30 +90,7 @@ public class AddEmplyeController implements Initializable {
         Position.add("Digital Marketing Coordinator");
         addPositionTitle.setItems(Position);
 
-}
-
-    private void loadTable01() {
-        ObservableList<Table01> tbl01 = FXCollections.observableArrayList();
-        ObservableList<EmployeEntity> allCustomers = EmployeController.getInstance().getAllEmploye();
-
-        allCustomers.forEach(employe -> {
-            Table01 data;
-            data=new Table01(
-                   employe.getEmployeeId(),
-                    employe.getEmployeeTitle(),
-                    employe.getEmployeeName(),
-                    employe.getEmployeePosition()
-
-            );
-            tbl01.add(data);
-        });
-       tblCustomer1.setItems(tbl01);
     }
-
-    private void loadTable02() {
-
-    }
-
     private void loadInitialValues() {
         employeeTitle.setValue("Select Title");
         ObservableList list = FXCollections.observableArrayList();
@@ -121,7 +99,26 @@ public class AddEmplyeController implements Initializable {
         list.add(new String("MS"));
         employeeTitle.setItems(list);
     }
+    private void loadTable01() {
+//        ObservableList<Table01> tbl01 = FXCollections.observableArrayList();
+//        ObservableList<EmployeEntity> allCustomers = EmployeController.getInstance().getAllEmploye();
+//
+//        allCustomers.forEach(employe -> {
+//            Table01 data;
+//            data=new Table01(
+//                   employe.getEmployeeId(),
+//                    employe.getEmployeeTitle(),
+//                    employe.getEmployeeName(),
+//                    employe.getEmployeePosition()
+//
+//            );
+//            tbl01.add(data);
+//        });
+//       tblCustomer1.setItems(tbl01);
+    }
+    private void loadTable02() {
 
+    }
     public void btnAddCustomerOnAction(ActionEvent actionEvent) {
 
         try {

@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="927.0" stylesheets="@../css/dashboardDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Clothify.controller.Supplier.AddSupplierManeegeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="927.0" stylesheets="@../css/dashboardDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Clothify.controller.Supplier.AddSupplierFormController">
    <children>
       <JFXTextField fx:id="txtCompany" layoutX="55.0" layoutY="204.0" prefHeight="26.0" prefWidth="207.0" promptText="Company" />
       <JFXTextField fx:id="mobilenukmber" layoutX="55.0" layoutY="263.0" prefHeight="26.0" prefWidth="207.0" promptText="Mobil Number" />
