@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="635.0" prefWidth="1035.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Clothify.controller.Employee.AddEmplyeController">
+   <children>
+      <Label layoutX="507.0" layoutY="33.0" text="Employe " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="43.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="employeeTitle" layoutX="46.0" layoutY="236.0" prefHeight="32.0" prefWidth="205.0" />
+      <JFXTextField fx:id="txtCustomerName" layoutX="47.0" layoutY="302.0" prefHeight="32.0" prefWidth="202.0" promptText="Name" />
+      <DatePicker fx:id="dateDob" layoutX="45.0" layoutY="390.0" prefHeight="35.0" prefWidth="206.0" promptText="DOB" />
+      <JFXTextField fx:id="txtSalary" layoutX="47.0" layoutY="469.0" prefHeight="35.0" prefWidth="206.0" promptText="Salary" />
+      <JFXTextField fx:id="txtAddress" layoutX="328.0" layoutY="235.0" prefHeight="32.0" prefWidth="205.0" promptText="Address" />
+      <JFXTextField fx:id="txtCity" layoutX="331.0" layoutY="307.0" prefHeight="35.0" prefWidth="206.0" promptText="City" />
+      <JFXTextField fx:id="txtProvince" layoutX="331.0" layoutY="389.0" prefHeight="35.0" prefWidth="206.0" promptText="Province" />
+      <JFXTextField fx:id="txtPostalCode" layoutX="331.0" layoutY="469.0" prefHeight="35.0" prefWidth="206.0" promptText="Postal Code" />
+      <Separator layoutX="291.0" layoutY="150.0" orientation="VERTICAL" prefHeight="387.0" prefWidth="7.0" />
+      <JFXButton layoutX="265.0" layoutY="567.0" onAction="#btnAddCustomerOnAction" prefHeight="38.0" prefWidth="132.0" style="-fx-background-color: #44bd32;" text="Add Customer " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="153.0" layoutY="567.0" onAction="#btnDeleteOnAction" prefHeight="38.0" prefWidth="82.0" style="-fx-background-color: #e84118;" text="Delete">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="50.0" layoutY="568.0" onAction="#btnUpdateOnAction" prefHeight="38.0" prefWidth="79.0" style="-fx-background-color: #273c75;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblCustomer1" layoutX="577.0" layoutY="149.0" prefHeight="208.0" prefWidth="457.0">
+        <columns>
+          <TableColumn fx:id="colCustomerId" prefWidth="103.0" text="Customer ID" />
+          <TableColumn fx:id="colCustomerTitle" prefWidth="96.79998779296875" text="Customer Title" />
+            <TableColumn fx:id="colCustomerName" minWidth="0.0" prefWidth="97.60003662109375" text="Name" />
+            <TableColumn fx:id="colDob" minWidth="0.0" prefWidth="76.0" text="DOB" />
+            <TableColumn fx:id="colPosition" minWidth="0.0" prefWidth="83.2000732421875" text="Position" />
+
+        </columns>
+      </TableView>
+      <TableView fx:id="tblCustomer2" layoutX="582.0" layoutY="388.0" prefHeight="208.0" prefWidth="457.0">
+         <columns>
+            <TableColumn fx:id="colCustomerIdTbl2" prefWidth="75.0" text="Customer ID" />
+            <TableColumn fx:id="colSalary" prefWidth="75.0" text="Salary" />
+            <TableColumn fx:id="colAddress" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="colCity" prefWidth="75.0" text="City" />
+            <TableColumn fx:id="colProvince" prefWidth="75.0" text="Province" />
+            <TableColumn fx:id="colPostalCode" prefWidth="75.0" text="Postal Code" />
+         </columns>
+      </TableView>
+      <ChoiceBox fx:id="addPositionTitle" layoutX="327.0" layoutY="175.0" prefHeight="32.0" prefWidth="201.0" />
+      <JFXTextField fx:id="txtCustomerId1" layoutX="47.0" layoutY="171.0" prefHeight="26.0" prefWidth="209.0" promptText="Employe ID" />
+      <Separator layoutX="47.0" layoutY="167.0" prefHeight="3.0" prefWidth="231.0" />
+      <TextField layoutX="47.0" layoutY="107.0" prefHeight="26.0" prefWidth="184.0" />
+      <Button layoutX="256.0" layoutY="108.0" mnemonicParsing="false">
+         <graphic>
+            <FontAwesomeIconView glyphName="SERCH" size="1.5em" text="" />
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
