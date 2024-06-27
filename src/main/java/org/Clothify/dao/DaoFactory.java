@@ -1,8 +1,8 @@
 package org.Clothify.dao;
 
 
-import org.Clothify.dao.User.impl.UserDaoImpl;
-import org.Clothify.dao.employe.impl.EmployeDaoImpl;
+import org.Clothify.dao.custom.impl.CustomerDaoImpl;
+import org.Clothify.dao.employe.impl.EmployeeDaoImpl;
 import org.Clothify.util.DaoType;
 
 public class DaoFactory {
@@ -15,8 +15,8 @@ public class DaoFactory {
     }
     public <T extends SuperDao>T getDao(DaoType type){
         switch (type){
-            case EMPLOYE :return (T)new EmployeDaoImpl();
-            case USER:return  (T)new UserDaoImpl();
+            case EMPLOOYE:return (T) new  EmployeeDaoImpl();
+            case CUSTOMER:return (T)new CustomerDaoImpl();
         }
         return null;
     }

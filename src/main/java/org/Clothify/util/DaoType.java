@@ -1,5 +1,5 @@
 package org.Clothify.util;
 
 public enum DaoType {
-    EMPLOYE,USER,SUPPLIER
+    USER,SUPPLIER,CUSTOMER,EMPLOOYE
 }

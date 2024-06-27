@@ -60,7 +60,7 @@ public class addUserFromController implements Initializable {
     @FXML
     private JFXTextField txtpasword;
 
-    private final USerBo uSerBo= BoFactory.getInstance().getBo(BoType.USER);
+    private  USerBo uSerBo= BoFactory.getInstance().getBo(BoType.USER);
 
     @FXML
     void btnAdd(ActionEvent event) {

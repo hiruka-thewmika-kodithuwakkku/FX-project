@@ -7,16 +7,13 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import org.Clothify.bo.BoFactory;
-import org.Clothify.bo.custom.EmployeBo;
+import org.Clothify.bo.employe.EmployeeBo;
 import org.Clothify.dto.Employee;
-import org.Clothify.dto.tm.Table01;
-import org.Clothify.dto.tm.Table02;
-import org.Clothify.entity.EmployeEntity;
 import org.Clothify.util.BoType;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.ResourceBundle;
 
@@ -47,23 +44,12 @@ public class AddEmplyeController implements Initializable {
     public JFXTextField txtCustomerId1;
     public ChoiceBox employeeTitle;
 
-    private EmployeBo employeBo = BoFactory.getInstance().getBo(BoType.EMPLOYEE);
+    private EmployeeBo employeBo = BoFactory.getInstance().getBo(BoType.EMPLOYEE);
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-//        colCustomerId.setCellValueFactory(new PropertyValueFactory<>("Employee_id "));
-//        colCustomerTitle.setCellValueFactory(new PropertyValueFactory<>("cEmployee_title"));
-//        colCustomerName.setCellValueFactory(new PropertyValueFactory<>("Employee_name"));
-//        colDob.setCellValueFactory(new PropertyValueFactory<>("dob"));
-//        colPosition.setCellValueFactory(new PropertyValueFactory<>("Employee_position"));
-//        colSalary.setCellValueFactory(new PropertyValueFactory<>("salary"));
-//        colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
-//        colCity.setCellValueFactory(new PropertyValueFactory<>("city"));
-//        colProvince.setCellValueFactory(new PropertyValueFactory<>("province"));
-//        colPostalCode.setCellValueFactory(new PropertyValueFactory<>("postal_code"));
+
         loadInitialValues();
-       // loadTable01();
-        //loadTable02();
         loadPosition();
 
 
@@ -100,48 +86,29 @@ public class AddEmplyeController implements Initializable {
         list.add(new String("MS"));
         employeeTitle.setItems(list);
     }
-    private void loadTable01() {
-//        ObservableList<Table01> tbl01 = FXCollections.observableArrayList();
-//        ObservableList<EmployeEntity> allCustomers = EmployeController.getInstance().getAllEmploye();
-//
-//        allCustomers.forEach(employe -> {
-//            Table01 data;
-//            data=new Table01(
-//                   employe.getEmployeeId(),
-//                    employe.getEmployeeTitle(),
-//                    employe.getEmployeeName(),
-//                    employe.getEmployeePosition()
-//
-//            );
-//            tbl01.add(data);
-//        });
-//       tblCustomer1.setItems(tbl01);
-    }
-    private void loadTable02() {
 
-    }
     public void btnAddCustomerOnAction(ActionEvent actionEvent) {
+        Employee employee= new Employee(
+               txtCustomerId1.getText(),
+               employeeTitle.getValue().toString(),
+               txtCustomerName.getText(),
+                txtSalary.getText(),
+               addPositionTitle.getValue().toString(),
+               txtAddress.getText(),
+               txtCity.getText(),
+               txtProvince.getText(),
+               txtPostalCode.getText()
 
-            Employee employee= new Employee(
-                   txtCustomerId1.getText(),
-                   employeeTitle.getValue().toString(),
-                   txtCustomerName.getText(),
-                   addPositionTitle.getValue().toString(),
-                   txtSalary.getText(),
-                   txtAddress.getText(),
-                   txtCity.getText(),
-                   txtProvince.getText(),
-                   txtPostalCode.getText()
+       );
 
-           );
-        System.out.println(employee);
         boolean em = employeBo.saveCustomer(employee);
         System.out.println(em);
+
         if (em){
-            new Alert(Alert.AlertType.ERROR,"Customer Not Added !").show();
+        new Alert(Alert.AlertType.ERROR,"Employe Not Added !").show();
         }else{
-            new Alert(Alert.AlertType.CONFIRMATION,"Customer Added !").show();
-        }
+        new Alert(Alert.AlertType.CONFIRMATION,"Employe Added !").show();
+    }
 
     }
 

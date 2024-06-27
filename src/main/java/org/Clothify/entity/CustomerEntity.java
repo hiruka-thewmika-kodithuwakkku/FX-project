@@ -4,8 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.*;
 
-import javax.persistence.*;
-
+import java.util.Date;
 
 @Getter
 @Setter
@@ -13,13 +12,13 @@ import javax.persistence.*;
 @NoArgsConstructor
 @ToString
 @Entity
-public class EmployeEntity {
+public class CustomerEntity {
     @Id
-    private String ID;
-    private String employeeTitle;
-    private String employeeName;
-    private String salary;
-    private String employeePosition;
+    private String id;
+    private String customerTitle;
+    private String customerName;
+    private Date dob;
+    private Double salary;
     private String address;
     private String city;
     private String province;

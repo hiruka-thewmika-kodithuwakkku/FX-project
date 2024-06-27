@@ -1,10 +1,10 @@
-package org.Clothify.bo.custom;
+package org.Clothify.bo.employe;
 
 
 import org.Clothify.bo.SuperBo;
 import org.Clothify.dto.Employee;
 
-public interface EmployeBo extends SuperBo {
+public interface EmployeeBo extends SuperBo {
     boolean saveCustomer(Employee dto);
     boolean deleteById(String id);
 }

@@ -12,11 +12,11 @@ import lombok.*;
 @ToString
 public class Employee {
 
-    private String employeeId;
+    private String id;
     private String employeeTitle;
     private String employeeName;
-    private String employeePosition;
     private String salary;
+    private String employeePosition;
     private String address;
     private String city;
     private String province;

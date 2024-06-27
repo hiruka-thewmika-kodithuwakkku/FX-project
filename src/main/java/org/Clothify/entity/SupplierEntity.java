@@ -22,5 +22,4 @@ public class SupplierEntity {
     @Column(name = "email")
     private String email;
 
-    // Constructors, getters, and setters
 }

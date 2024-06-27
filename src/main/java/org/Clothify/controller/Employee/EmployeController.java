@@ -86,7 +86,7 @@ public class EmployeController implements EmployeService{
             String SQL = "INSERT INTO  EmployeEntity VALUES (?,?,?,?,?,?,?,?,?)";
             CrudUtil.execute(
                     SQL,
-                    customer.getEmployeeId(),
+                    customer.getId(),
                     customer.getEmployeeTitle(),
                     customer.getEmployeeName(),
                     customer.getSalary(),

@@ -25,17 +25,17 @@ public class UserDaoImpl  implements UserDao {
         return false;
     }
 
-    @Override
-    public List <UserEntity> get() {
-        try (Session session = HibernateUtil.getSession()) {
-            List<UserEntity> items;
-            session.beginTransaction();
-            Query query = session.createQuery("from SupplierEntity", UserEntity.class);
-            items = query.getResultList();
-            return items;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
+//    @Override
+//    public List <UserEntity> get() {
+//        try (Session session = HibernateUtil.getSession()) {
+//            List<UserEntity> items;
+//            session.beginTransaction();
+//            Query query = session.createQuery("from SupplierEntity", UserEntity.class);
+//            items = query.getResultList();
+//            return items;
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return null;
+//    }
 }

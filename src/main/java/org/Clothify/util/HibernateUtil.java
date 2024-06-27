@@ -1,6 +1,7 @@
 package org.Clothify.util;
 
 
+import org.Clothify.entity.CustomerEntity;
 import org.Clothify.entity.EmployeEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -19,6 +20,7 @@ public class HibernateUtil {
                 .build();
 
         Metadata metaData = new MetadataSources(build)
+                .addAnnotatedClass(CustomerEntity.class)
                 .addAnnotatedClass(EmployeEntity.class)
                 .getMetadataBuilder()
                 .applyImplicitNamingStrategy(ImplicitNamingStrategyJpaCompliantImpl.INSTANCE)
@@ -31,4 +33,3 @@ public class HibernateUtil {
         return session.openSession();
     }
 }
-
