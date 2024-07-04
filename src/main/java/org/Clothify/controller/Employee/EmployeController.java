@@ -27,7 +27,7 @@ public class EmployeController implements EmployeService{
     public Employee searchEmploye(String employeeId) {
         System.out.println(employeeId);
         try {
-            ResultSet resultSet  = CrudUtil.execute("SELECT * FROM customer WHERE employeeId=?",employeeId);
+            ResultSet resultSet  = CrudUtil.execute("SELECT * FROM customer WHERE  ID=?",employeeId);
 
             while (resultSet.next()){
                 return new Employee(
@@ -52,7 +52,7 @@ public class EmployeController implements EmployeService{
     @Override
     public ObservableList<Employee> getAllEmploye() {
         try {
-            ResultSet resultSet = CrudUtil.execute("SELECT * FROM EmployeEntity");
+            ResultSet resultSet = CrudUtil.execute("SELECT * FROM employeentity ");
             ObservableList<Employee> listTable = FXCollections.observableArrayList();
             while (resultSet.next()) {
                 listTable.add(
@@ -81,19 +81,19 @@ public class EmployeController implements EmployeService{
 
 
 
-    public boolean addEmploye(Employee customer) {
+    public boolean addEmploye(Employee employee) {
         try {
-            String SQL = "INSERT INTO  EmployeEntity VALUES (?,?,?,?,?,?,?,?,?)";
+            String SQL = "INSERT INTO  employeentity  VALUES (?,?,?,?,?,?,?,?,?)";
             CrudUtil.execute(
                     SQL,
-                    customer.getId(),
-                    customer.getEmployeeTitle(),
-                    customer.getEmployeeName(),
-                    customer.getSalary(),
-                    customer.getAddress(),
-                    customer.getCity(),
-                    customer.getProvince(),
-                    customer.getPostalCode()
+                    employee.getId(),
+                    employee.getCity(),
+                    employee.getEmployeeName(),
+                    employee.getEmployeePosition(),
+                    employee.getEmployeeTitle(),
+                    employee.getPostalCode(),
+                    employee.getProvince(),
+                    employee.getSalary()
             );
 
         } catch (SQLException | ClassNotFoundException e) {

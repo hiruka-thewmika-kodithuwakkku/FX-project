@@ -13,6 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @ToString
 @Entity
+
 public class EmployeEntity {
     @Id
     private String ID;

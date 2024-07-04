@@ -72,13 +72,13 @@ public class addUserFromController implements Initializable {
                 txtotp.getText()
         );
 
-       System.out.println(user);
-        boolean b = uSerBo.saveCustomer(user);
+        System.out.println(user);
+        boolean b = uSerBo.saveUser(user);
         System.out.println(b);
-        if (b) {
-            new Alert(Alert.AlertType.ERROR, "Customer Not Added!").show();
+        if (!b) {
+            new Alert(Alert.AlertType.ERROR, "User Not Added!").show();
         } else {
-            new Alert(Alert.AlertType.CONFIRMATION, "Customer Added!").show();
+            new Alert(Alert.AlertType.CONFIRMATION, "User Added!").show();
         }
     }
 

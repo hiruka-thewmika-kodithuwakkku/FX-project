@@ -6,7 +6,7 @@ import org.Clothify.dto.Employee;
 
 
 public interface EmployeService {
-    Employee searchEmploye(String customerId);
+    Employee searchEmploye(String Id);
     ObservableList<Employee> getAllEmploye();
-    boolean addEmploye(Employee customer);
+    boolean addEmploye(Employee employee);
 }

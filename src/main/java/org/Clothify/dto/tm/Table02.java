@@ -10,10 +10,10 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class Table02 {
-    private String customerId;
-    private Double salary;
-    private String address;
+    private String employeeID;
+    private String Address;
     private String city;
     private String province;
     private String postalCode;
+
 }

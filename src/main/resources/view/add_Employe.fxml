@@ -44,24 +44,22 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <TableView fx:id="tblCustomer1" layoutX="322.0" layoutY="145.0" prefHeight="208.0" prefWidth="567.0">
+      <TableView fx:id="tblEmployee1" layoutX="322.0" layoutY="145.0" prefHeight="208.0" prefWidth="567.0">
         <columns>
-          <TableColumn fx:id="colCustomerId" prefWidth="103.0" text="Employe ID" />
-          <TableColumn fx:id="colCustomerTitle" prefWidth="121.5999755859375" text="Customer Title" />
-            <TableColumn fx:id="colCustomerName" minWidth="0.0" prefWidth="96.79998779296875" text="Name" />
-            <TableColumn fx:id="colDob" minWidth="0.0" prefWidth="109.5999755859375" text="DOB" />
-            <TableColumn fx:id="colPosition" minWidth="0.0" prefWidth="136.79998779296875" text="Position" />
+          <TableColumn fx:id="colEmployeID" prefWidth="119.20001220703125" text="Employe ID" />
+          <TableColumn fx:id="colEmployeTitle" prefWidth="157.60003662109375" text="Addres" />
+            <TableColumn fx:id="colEmployerName" minWidth="0.0" prefWidth="150.39996337890625" text="City" />
+            <TableColumn fx:id="colSalary" minWidth="0.0" prefWidth="140.0" text="Name" />
 
         </columns>
       </TableView>
       <TableView fx:id="tblCustomer2" layoutX="322.0" layoutY="371.0" prefHeight="192.0" prefWidth="567.0">
          <columns>
-            <TableColumn fx:id="colCustomerIdTbl2" prefWidth="96.0" text="Employe ID" />
-            <TableColumn fx:id="colSalary" prefWidth="64.79998779296875" text="Salary" />
-            <TableColumn fx:id="colAddress" prefWidth="79.20001220703125" text="Address" />
-            <TableColumn fx:id="colCity" prefWidth="73.5999755859375" text="City" />
-            <TableColumn fx:id="colProvince" prefWidth="111.2000732421875" text="Province" />
-            <TableColumn fx:id="colPostalCode" prefWidth="143.199951171875" text="Postal Code" />
+            <TableColumn fx:id="colCustomerIdTbl2" prefWidth="117.0" text="Employe ID" />
+            <TableColumn fx:id="colAddress" prefWidth="118.0" text="Titel" />
+            <TableColumn fx:id="colCity" prefWidth="123.0" text="PostalCode" />
+            <TableColumn fx:id="colProvince" prefWidth="78.0" text="Province" />
+            <TableColumn fx:id="colPostalCode" prefWidth="130.0" text="Salary" />
          </columns>
       </TableView>
       <ChoiceBox fx:id="addPositionTitle" layoutX="42.0" layoutY="331.0" prefHeight="26.0" prefWidth="206.0" />

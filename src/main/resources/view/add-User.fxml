@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="956.0" stylesheets="@../css/dashboardDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Clothify.controller.User.addUserFromController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1008.0" stylesheets="@../css/dashboardDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Clothify.controller.User.addUserFromController">
    <children>
       <JFXTextField fx:id="txtNaame" layoutX="55.0" layoutY="236.0" prefHeight="26.0" prefWidth="207.0" promptText="Name" />
       <JFXTextField fx:id="textmail" layoutX="55.0" layoutY="297.0" prefHeight="26.0" prefWidth="207.0" promptText="Email" />
@@ -40,13 +40,13 @@
          </graphic>
       </Button>
       <Separator layoutX="53.0" layoutY="131.0" prefHeight="0.0" prefWidth="857.0" />
-      <TableView layoutX="298.0" layoutY="147.0" prefHeight="372.0" prefWidth="618.0">
+      <TableView layoutX="298.0" layoutY="147.0" prefHeight="399.0" prefWidth="679.0">
         <columns>
           <TableColumn fx:id="colID" prefWidth="84.0" text="ID" />
-            <TableColumn fx:id="colName" prefWidth="164.800048828125" text="Name" />
-            <TableColumn fx:id="colEmail" prefWidth="131.2000732421875" text="Email" />
-            <TableColumn fx:id="colPasword" prefWidth="111.199951171875" text="Password" />
-            <TableColumn fx:id="colpositcolotpion" prefWidth="128.0" text="OTP" />
+            <TableColumn fx:id="colName" prefWidth="211.99996948242188" text="Name" />
+            <TableColumn fx:id="colEmail" prefWidth="144.0" text="Email" />
+            <TableColumn fx:id="colPasword" prefWidth="116.79998779296875" text="Password" />
+            <TableColumn fx:id="colpositcolotpion" prefWidth="124.0" text="OTP" />
         </columns>
       </TableView>
       <JFXTextField fx:id="txtSupplierID" layoutX="55.0" layoutY="177.0" prefHeight="26.0" prefWidth="207.0" promptText="ID" />

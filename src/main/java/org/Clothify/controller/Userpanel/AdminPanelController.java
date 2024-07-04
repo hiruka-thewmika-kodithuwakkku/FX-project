@@ -41,6 +41,22 @@ public class AdminPanelController {
         }
 
     public void btnProduckts(ActionEvent actionEvent) {
+        try {
+            FXMLLoader load = new FXMLLoader();
+            load.setLocation(getClass().getResource("/view/addProduct.fxml"));
+            Parent loadedRoot = load.load();
+            anchorPanel.getChildren().clear();
+            StackPane stackPane = new StackPane(loadedRoot);
+            stackPane.setAlignment(Pos.CENTER);
+            anchorPanel.getChildren().add(stackPane);
+            AnchorPane.setTopAnchor(stackPane, 0.0);
+            AnchorPane.setBottomAnchor(stackPane, 0.0);
+            AnchorPane.setLeftAnchor(stackPane, 0.0);
+            AnchorPane.setRightAnchor(stackPane, 0.0);
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void btnBackonAction(ActionEvent actionEvent) {
@@ -63,7 +79,7 @@ public class AdminPanelController {
 
     }
 
-    public void btnProduct(ActionEvent actionEvent) {
+    public void btnSuplier(ActionEvent actionEvent) {
         try {
             FXMLLoader load = new FXMLLoader();
             load.setLocation(getClass().getResource("/view/addSupplier.fxml"));

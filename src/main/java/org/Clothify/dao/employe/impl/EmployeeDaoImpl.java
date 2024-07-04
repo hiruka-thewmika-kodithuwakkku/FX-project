@@ -3,7 +3,6 @@ package org.Clothify.dao.employe.impl;
 
 
 import org.Clothify.dao.employe.EmployeeDao;
-import org.Clothify.entity.CustomerEntity;
 import org.Clothify.entity.EmployeEntity;
 import org.Clothify.util.HibernateUtil;
 import org.hibernate.Session;
@@ -12,11 +11,9 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
     @Override
     public boolean save(EmployeEntity entity) {
-        System.out.println(entity);
-        System.out.println("in");
         Session session = HibernateUtil.getSession();
         session.getTransaction().begin();
-        session.detach(entity);
+        session.persist(entity);
         session.getTransaction().commit();
         session.close();
         return true;

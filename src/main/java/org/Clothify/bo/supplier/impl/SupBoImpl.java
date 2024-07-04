@@ -13,6 +13,7 @@ public class SupBoImpl implements SupBo {
     private SupDao supDao= DaoFactory.getInstance().getDao(DaoType.SUPPLIER);
     @Override
     public boolean saveSupplier(Supplier dto) {
+
         return supDao.save(new ModelMapper().map(dto , SupplierEntity.class));
     }
 

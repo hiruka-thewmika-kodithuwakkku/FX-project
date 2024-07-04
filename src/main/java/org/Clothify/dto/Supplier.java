@@ -1,17 +1,17 @@
 package org.Clothify.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 public class Supplier {
     private String Supplierid;
-    private String Suppliername;
-    private String Suppliercompany;
-    private String Supplieremail;
+    private String company;
+    private String Suppliernumber;
+    private String supplierAddres;
+    private String SupplierEmail;
+    private String Brand;
 }

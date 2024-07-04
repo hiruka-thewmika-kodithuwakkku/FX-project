@@ -16,9 +16,9 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="927.0" stylesheets="@../css/dashboardDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Clothify.controller.Supplier.AddSupplierFormController">
    <children>
       <JFXTextField fx:id="txtCompany" layoutX="55.0" layoutY="204.0" prefHeight="26.0" prefWidth="207.0" promptText="Company" />
-      <JFXTextField fx:id="mobilenukmber" layoutX="55.0" layoutY="263.0" prefHeight="26.0" prefWidth="207.0" promptText="Mobil Number" />
-      <ChoiceBox fx:id="txtProduct" layoutX="55.0" layoutY="460.0" prefHeight="26.0" prefWidth="207.0" />
-      <JFXTextField fx:id="addres" layoutX="55.0" layoutY="327.0" prefHeight="26.0" prefWidth="207.0" promptText="Addres" />
+      <JFXTextField fx:id="txtMobileNumber" layoutX="55.0" layoutY="263.0" prefHeight="26.0" prefWidth="207.0" promptText="Mobil Number" />
+      <ChoiceBox fx:id="BrandNAme" layoutX="55.0" layoutY="460.0" prefHeight="26.0" prefWidth="207.0" />
+      <JFXTextField fx:id="txaddres" layoutX="55.0" layoutY="327.0" prefHeight="26.0" prefWidth="207.0" promptText="Addres" />
       <Separator layoutX="281.0" layoutY="138.0" orientation="VERTICAL" prefHeight="350.0" prefWidth="5.0" />
       <Button layoutX="454.0" layoutY="94.0" mnemonicParsing="false" onAction="#btnUpdate" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #4cd137;" styleClass="update-btn" stylesheets="@/css/dashboardDesign.css" text="Update" textFill="WHITE">
          <font>
@@ -32,7 +32,7 @@
          </font>
       </Button>
       <TextField layoutX="55.0" layoutY="88.0" prefHeight="38.0" prefWidth="181.0" promptText="search" />
-      <Button layoutX="201.0" layoutY="89.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="34.0" styleClass="nav-btn" stylesheets="@../css/dashboardDesign.css">
+      <Button layoutX="201.0" layoutY="89.0" mnemonicParsing="false" onAction="#txtsearch" prefHeight="30.0" prefWidth="34.0" styleClass="nav-btn" stylesheets="@../css/dashboardDesign.css">
          <graphic>
             <FontAwesomeIconView glyphName="SEARCH" />
          </graphic>
@@ -44,13 +44,13 @@
             <TableColumn fx:id="colnic" prefWidth="82.39996337890625" text="Company" />
             <TableColumn fx:id="colmobile" prefWidth="69.60003662109375" text="Contac" />
             <TableColumn fx:id="coladres" prefWidth="88.79998779296875" text="Addres" />
-            <TableColumn fx:id="colposition" prefWidth="137.60003662109375" text="Email" />
-            <TableColumn fx:id="colposition1" prefWidth="137.60003662109375" text="Product" />
+            <TableColumn fx:id="colEima" prefWidth="137.60003662109375" text="Email" />
+            <TableColumn fx:id="colProduct" prefWidth="137.60003662109375" text="Product" />
         </columns>
       </TableView>
       <JFXTextField fx:id="txtSupplierID" layoutX="55.0" layoutY="152.0" prefHeight="26.0" prefWidth="207.0" promptText="ID" />
       <ImageView fx:id="img" fitHeight="93.0" fitWidth="128.0" layoutX="952.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
-      <JFXTextField fx:id="addres1" layoutX="55.0" layoutY="395.0" prefHeight="26.0" prefWidth="207.0" promptText="Email" />
+      <JFXTextField fx:id="txtEmail" layoutX="55.0" layoutY="395.0" prefHeight="26.0" prefWidth="207.0" promptText="Email" />
    </children>
    <styleClass>
       <String fx:value="shadow" />

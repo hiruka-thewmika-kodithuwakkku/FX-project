@@ -12,7 +12,7 @@ public class UserBoImpl implements USerBo {
     private UserDao userDao = DaoFactory.getInstance().getDao(DaoType.USER);
 
     @Override
-    public boolean saveCustomer(User dto) {
+    public boolean saveUser(User dto) {
         return userDao.save(new ModelMapper().map(dto, UserEntity.class));
     }
 

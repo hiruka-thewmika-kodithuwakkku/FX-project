@@ -1,4 +1,5 @@
 package org.Clothify.bo.employe.impl;
+import javafx.collections.ObservableList;
 import org.Clothify.bo.employe.EmployeeBo;
 import org.Clothify.dao.DaoFactory;
 import org.Clothify.dao.employe.EmployeeDao;
@@ -9,9 +10,9 @@ import org.modelmapper.ModelMapper;
 
 public class EmployeBoImpl implements EmployeeBo {
 
-    private EmployeeDao employeeDao = DaoFactory.getInstance().getDao(DaoType.EMPLOOYE);
+    private EmployeeDao employeeDao = DaoFactory.getInstance().getDao(DaoType.EMPLOYEE);
     @Override
-    public boolean saveCustomer(Employee dto) {
+    public boolean saveEmployee(Employee dto) {
         return employeeDao.save(new ModelMapper().map(dto, EmployeEntity.class));
     }
 
@@ -19,5 +20,6 @@ public class EmployeBoImpl implements EmployeeBo {
     public boolean deleteById(String id) {
         return false;
     }
+
 }
 
