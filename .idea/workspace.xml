@@ -5,55 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="316858f8-925e-4333-b5a9-3265f1b8f19a" name="Changes" comment="fx project">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/Supplier/SupplierServce.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/Supplier/addSupplierController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/bo/BoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/bo/BoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/bo/User/USerBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/bo/User/USerBo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/bo/User/impl/UserBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/bo/User/impl/UserBoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/bo/custom/CustomerBo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/bo/custom/impl/CustomerBoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/bo/employe/EmployeeBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/bo/employe/EmployeeBo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/bo/employe/impl/EmployeBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/bo/employe/impl/EmployeBoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/bo/supplier/impl/SupBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/bo/supplier/impl/SupBoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/Employee/AddEmplyeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/Employee/AddEmplyeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/Employee/EmployeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/Employee/EmployeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/Employee/EmployeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/Employee/EmployeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/Product/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/Product/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/Supplier/AddSupplierFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/Supplier/AddSupplierFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/User/addUserFromController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/User/addUserFromController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/Userpanel/AdminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/Userpanel/AdminPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/customer/AddCustomerFromController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/customer/CustomerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/customer/CustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/dao/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/dao/DaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/dao/custom/CustomerDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/dao/custom/impl/CustomerDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/dao/employe/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/dao/employe/EmployeeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/dao/employe/impl/EmployeeDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/dao/employe/impl/EmployeeDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/dao/supplier/impl/SuppDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/dao/supplier/impl/SuppDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/db/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/db/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/dto/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/dto/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/dto/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/dto/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/dto/Supplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/dto/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/Login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/controller/Login/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/dto/tm/Table01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/dto/tm/Table01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/dto/tm/Table02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/dto/tm/Table02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/entity/CustomerEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/entity/EmployeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/entity/EmployeEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/entity/SupplierEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/entity/SupplierEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/util/BoType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/util/BoType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/util/DaoType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/util/DaoType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Clothify/util/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Clothify/util/HibernateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/UserAdmin-form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/UserAdmin-form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/add-User.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/add-User.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/addProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/addProduct.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/addSupplier.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/addSupplier.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/add_Employe.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/add_Employe.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/add_customer_form.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/loginform.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/loginform.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/reset_Password.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/reset_Password.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,9 +37,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
   <component name="ProjectId" id="2iPGUS0irzWoRsCpEXxYvxlO8kW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -207,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719514863673</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fx project">
+      <option name="closed" value="true" />
+      <created>1720109648980</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720109648980</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

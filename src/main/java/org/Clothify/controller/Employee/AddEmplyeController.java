@@ -16,12 +16,9 @@ import org.Clothify.dto.tm.Table02;
 import org.Clothify.util.BoType;
 
 import java.net.URL;
-import java.sql.SQLException;
-import java.text.ParseException;
 import java.util.ResourceBundle;
 
 public class AddEmplyeController implements Initializable {
-    public JFXTextField txtCustomerId;
     public JFXTextField txtCustomerName;
     public JFXTextField txtSalary, txtAddress;
 
@@ -37,12 +34,13 @@ public class AddEmplyeController implements Initializable {
     public TableColumn colCity;
     public TableColumn colProvince;
     public TableColumn colPostalCode;
-    public TableColumn colPosition;
     public ChoiceBox addPositionTitle;
     public JFXTextField txtCustomerId1;
     public ChoiceBox employeeTitle;
     public TableColumn colEmployeTitle;
     public TableColumn colEmployerName;
+    public TextField txtseEmployeID;
+    public TableColumn colposition;
 
     private EmployeeBo employeBo = BoFactory.getInstance().getBo(BoType.EMPLOYEE);
 
@@ -53,7 +51,8 @@ public class AddEmplyeController implements Initializable {
         colEmployeTitle.setCellValueFactory(new PropertyValueFactory<>("Title"));
         colEmployerName.setCellValueFactory(new PropertyValueFactory<>("Name"));
         colSalary.setCellValueFactory(new PropertyValueFactory<>("Salary"));
-
+        colposition.setCellValueFactory(new PropertyValueFactory<>("employeePosition"));
+        
         colCustomerIdTbl2.setCellValueFactory(new PropertyValueFactory<>("employeeID"));
         colAddress.setCellValueFactory(new PropertyValueFactory<>("Address"));
         colCity.setCellValueFactory(new PropertyValueFactory<>("city"));
@@ -82,7 +81,8 @@ public class AddEmplyeController implements Initializable {
                             employee.getId(),
                             employee.getEmployeeTitle(),
                             employee.getEmployeeName(),
-                            employee.getSalary()
+                            employee.getSalary(),
+                            employee.getEmployeePosition()
 
                     )
             );
@@ -164,17 +164,67 @@ public class AddEmplyeController implements Initializable {
         cleartextfeeld();
 
     }
+    private void setEmployeeDataFroLbl(String employeeId) {
+        Employee employee =EmployeController.getInstance().searchEmploye(employeeId);
+        System.out.println(employee);
+
+
+    }
 
     public void btnSearchOnAction(ActionEvent actionEvent) {
-        Employee employee = EmployeController.getInstance().searchEmploye(txtCustomerId.getText());
+        Employee employee = EmployeController.getInstance().searchEmploye(txtseEmployeID.getText());
         System.out.println(employee);
+        txtCustomerId1.setText(employee.getId());
+        employeeTitle.setValue(employee.getEmployeeTitle());
+        txtCustomerName.setText(employee.getEmployeeName());
+        txtSalary.setText(employee.getSalary());
+        addPositionTitle.setValue(employee.getEmployeePosition());
+        txtAddress.setText(employee.getAddress());
+        txtCity.setText(employee.getCity());
+        txtProvince.setText(employee.getProvince());
+        txtPostalCode.setText(employee.getPostalCode());
+
     }
+
 
     public void btnDeleteOnAction(ActionEvent actionEvent) {
+        String employeeId = txtCustomerId1.getText();
+        boolean result = EmployeController.getInstance().deleteEmploye(employeeId);
+        if (result) {
+            new Alert(Alert.AlertType.CONFIRMATION, "Employee Deleted!").show();
+            lodeTable1();
+            loadTable02();
+            cleartextfeeld();
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Employee Not Found!").show();
+        }
     }
 
+
     public void btnUpdateOnAction(ActionEvent actionEvent) {
+        Employee employee = new Employee(
+                txtCustomerId1.getText(),
+                employeeTitle.getValue().toString(),
+                txtCustomerName.getText(),
+                txtSalary.getText(),
+                addPositionTitle.getValue().toString(),
+                txtAddress.getText(),
+                txtCity.getText(),
+                txtProvince.getText(),
+                txtPostalCode.getText()
+        );
+
+        boolean result = EmployeController.getInstance().updateEmploye(employee);
+        if (result) {
+            new Alert(Alert.AlertType.CONFIRMATION, "Employee Updated!").show();
+            lodeTable1();
+            loadTable02();
+            cleartextfeeld();
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Failed to Update Employee!").show();
+        }
     }
+
     private void cleartextfeeld() {
                 txtCustomerId1.clear();
                 txtCustomerName.clear();

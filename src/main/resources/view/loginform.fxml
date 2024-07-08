@@ -23,19 +23,18 @@
          </font>
       </Text>
       <TextField fx:id="passwordText" layoutX="349.0" layoutY="211.0" managed="false" prefHeight="26.0" prefWidth="220.0" promptText="Password" visible="false" />
-      <Button layoutX="122.0" layoutY="382.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="26.0" prefWidth="74.0" styleClass="logout" stylesheets="@../css/dashboardDesign.css" text="Login" textFill="WHITE">
+      <Button fx:id="btnLogin" layoutX="122.0" layoutY="382.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="26.0" prefWidth="74.0" styleClass="logout" stylesheets="@../css/dashboardDesign.css" text="Login" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
       <CheckBox fx:id="checBox" layoutX="131.0" layoutY="318.0" mnemonicParsing="false" onAction="#checBox" prefHeight="27.0" prefWidth="115.0" text="show password" textFill="#a68e8e" />
-      <Button layoutX="227.0" layoutY="382.0" mnemonicParsing="false" onAction="#handleForgotPassword" prefHeight="26.0" prefWidth="104.0" styleClass="pass" stylesheets="@../css/dashboardDesign.css" text="FogetPassword">
+      <Button fx:id="btnForgotPassword" layoutX="227.0" layoutY="382.0" mnemonicParsing="false" onAction="#handleForgotPassword" prefHeight="26.0" prefWidth="104.0" styleClass="pass" stylesheets="@../css/dashboardDesign.css" text="FogetPassword">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <JFXTextField layoutX="130.0" layoutY="208.0" prefHeight="40.0" prefWidth="329.0" text="example@gemail.com" />
-      <JFXTextField layoutX="130.0" layoutY="153.0" prefHeight="40.0" prefWidth="329.0" promptText="Name" />
-      <JFXTextField layoutX="131.0" layoutY="256.0" prefHeight="40.0" prefWidth="329.0" promptText="Password" />
+      <JFXTextField fx:id="txtEmail" layoutX="130.0" layoutY="181.0" prefHeight="40.0" prefWidth="329.0" text="example@gemail.com" />
+      <JFXTextField fx:id="txtPassword" layoutX="131.0" layoutY="243.0" prefHeight="40.0" prefWidth="329.0" promptText="Password" />
    </children>
 </AnchorPane>

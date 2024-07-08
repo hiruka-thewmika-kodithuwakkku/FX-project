@@ -15,6 +15,7 @@ public class Table01 {
     private String Title;
     private String Name;
     private String Salary;
+    private String position;
 
 
 }

@@ -27,7 +27,7 @@ public class EmployeController implements EmployeService{
     public Employee searchEmploye(String employeeId) {
         System.out.println(employeeId);
         try {
-            ResultSet resultSet  = CrudUtil.execute("SELECT * FROM customer WHERE  ID=?",employeeId);
+            ResultSet resultSet  = CrudUtil.execute("SELECT * FROM  employeentity  WHERE  ID=?",employeeId);
 
             while (resultSet.next()){
                 return new Employee(
@@ -101,5 +101,35 @@ public class EmployeController implements EmployeService{
         }
         return false;
     }
+    public boolean deleteEmploye(String employeeId) {
+        try {
+            String SQL = "DELETE FROM employeentity WHERE ID=?";
+            return CrudUtil.execute(SQL, employeeId);
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
+    @Override
+    public boolean updateEmploye(Employee employee) {
+        try {
+            String SQL = "UPDATE employeentity SET (?,?,?,?,?,?,?,?,?)";
+            CrudUtil.execute(
+                    SQL,
+                    employee.getId(),
+                    employee.getCity(),
+                    employee.getEmployeeName(),
+                    employee.getEmployeePosition(),
+                    employee.getEmployeeTitle(),
+                    employee.getPostalCode(),
+                    employee.getProvince(),
+                    employee.getSalary()
+            );
+            return true;
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
+
+

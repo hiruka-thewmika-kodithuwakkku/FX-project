@@ -8,5 +8,6 @@ import org.Clothify.dto.Employee;
 public interface EmployeService {
     Employee searchEmploye(String Id);
     ObservableList<Employee> getAllEmploye();
-    boolean addEmploye(Employee employee);
+    boolean deleteEmploye(String employeeId);
+    boolean updateEmploye(Employee employee);
 }
